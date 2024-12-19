@@ -1,19 +1,52 @@
-.cell{
+.cell {
     width: 75px;
     height: 75px;
-    border:2px solid;
+    border: 2px solid;
     box-shadow: 0 0 0 2px;
     line-height: 75px;
     font-size: 50px;
     cursor: pointer;
-}
-#gameContainer{
-    font-family:"Permanent Marker", cursive;
     text-align: center;
 }
-#cellContainer{
-    display:grid;
-    grid-template-columns: repeat(3,auto);
-    width:225px;
+.cell:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+.winning-cell {
+    background-color: #90ee90;
+    color: #fff;
+}
+
+#gameContainer {
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    margin: 20px;
+}
+
+#statusText {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #333;
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    max-width: 100%;
     margin: auto;
+}
+
+#restartBtn {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#restartBtn:hover {
+    background-color: #0056b3;
 }
